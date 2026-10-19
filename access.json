@@ -4,6 +4,7 @@
   "keys": true,
   "until": "2026-10-22",
   "testers": [
-    {"name":"TomTest","key":"b8016b0fb0e05783804b0d9747d117804e5b4ecf1b980ff11faa247ff3150e26","until":"2026-10-20"}
+    {"name":"TomTest","key":"b8016b0fb0e05783804b0d9747d117804e5b4ecf1b980ff11faa247ff3150e26","until":"2026-10-20"},
+    {"name":"Aeth","key":"9318d041c396f158aba5915b54eb2bb64efefb128509d611495a0f8acc74a905","until":"2026-10-22"}
   ]
 }
