@@ -1,35 +1,49 @@
 # SOMA Demo: Freigabe
 
-Diese Datei entscheidet, ob die SOMA-Body-Lab-Demo startet (Q64). Sie gehört in ein **öffentliches** GitHub-Repo
-`TomKaetsch-lab/soma-demo-access` (Zweig `main`), dort als `access.json` und diese Anleitung als `README.md`. Die
-Demo fragt `https://raw.githubusercontent.com/TomKaetsch-lab/soma-demo-access/main/access.json` beim Start und alle
-5 Minuten ab. Eine Änderung wirkt nach spätestens etwa 10 Minuten (GitHub hält die Datei bis zu 5 Minuten zwischen).
-Ändern geht direkt auf github.com (Stift-Symbol an der Datei, dann „Commit changes“), auch vom Handy.
+Diese Datei entscheidet, ob die SOMA-Body-Lab-Demo startet (Q64). Sie liegt im **öffentlichen** GitHub-Repo
+`TomKaetsch-lab/soma-demo-access` (Zweig `main`) als `access.json`. Die Demo fragt
+`https://raw.githubusercontent.com/TomKaetsch-lab/soma-demo-access/main/access.json` beim Start und alle 5 Minuten ab.
+Eine Änderung wirkt nach spätestens etwa 10 Minuten (GitHub hält die Datei bis zu 5 Minuten zwischen).
 
-## Playtest zu und auf
+## Am einfachsten: „Freigabe steuern.bat“
+
+Das Repo einmal klonen (VS Code: „Clone Repository“, oder `git clone https://github.com/TomKaetsch-lab/soma-demo-access`),
+dann im Ordner **„Freigabe steuern.bat“** doppelklicken (braucht Node.js und Git). Sie zeigt den Stand, hier und
+online, und ein Menü:
+
+- **1 Playtest öffnen**, **2 Playtest schließen** (mit Meldung für die Tester, die auf dem Sperrbildschirm erscheint)
+- **3 Tester hinzufügen:** Name und optional „gültig bis“; sie zeigt den neuen Schlüssel (`SOMA-XXXX-XXXX-XXXX-XXXX`),
+  den gibst du dem Tester. Er steht außerdem in `schluessel.txt` in diesem Ordner, nur auf deinem Rechner (wird nie
+  gepusht).
+- **4 Tester entfernen** (nach Name), **5 Enddatum für alle** (`-` = ohne Ende), **6 Stand**
+
+Jede Änderung holt zuerst den Stand von GitHub, schreibt eine gültige `access.json`, committet und pusht sie. Ohne
+Menü geht es auch direkt: `node steuern.mjs zu "Pause bis Freitag."`, `node steuern.mjs auf`,
+`node steuern.mjs neu "Lena" 2026-11-30`, `node steuern.mjs weg "Lena"`, `node steuern.mjs stand`.
+
+## Von Hand (github.com oder VS Code)
+
+Genauso gut: `access.json` direkt auf github.com ändern (Stift-Symbol, dann „Commit changes“, auch vom Handy) oder in
+VS Code bearbeiten, committen und pushen.
 
 - **Zu:** `"open": false`. Laufende Demos wechseln auf den Sperrbildschirm und zeigen `message`, neue starten nicht.
 - **Auf:** `"open": true`. Die Tester klicken „Erneut prüfen“ (oder starten neu); der Schlüssel bleibt gespeichert.
-- **Ende für alle an einem Tag:** `"until": "2026-12-31"` dazuschreiben (letzter Tag, mitteleuropäische Zeit).
-  Weglassen heißt ohne Ende. Es zählt die Uhr von GitHub, nicht die des Testers.
-
-## Tester
-
-- Jeder Tester hat einen eigenen Schlüssel (`SOMA-XXXX-XXXX-XXXX-XXXX`), den er beim ersten Start eingibt. In der
-  Datei steht nur sein SHA-256, nicht der Schlüssel selbst; die öffentliche Datei verrät also keinen Schlüssel.
-- **Neuer Tester:** im Physics-Ordner „SOMA Demo Tester-Schluessel.bat“ (oder
-  `node scripts/demo-access.mjs key "Name" [JJJJ-MM-TT]`). Die ausgegebene Zeile unter `"testers"` einfügen, den
-  Schlüssel dem Tester geben. Mit Datum gilt der Schlüssel bis zu diesem Tag.
-- **Einen Tester sperren:** seine Zeile löschen (oder `"until"` auf einen vergangenen Tag setzen).
-- Die Namen sind öffentlich lesbar: lieber Vornamen oder Kürzel.
-- Ohne Schlüssel für alle: `"keys": false` (nicht empfohlen: dann reicht die exe allein).
+- **Ende für alle an einem Tag:** `"until": "2026-12-31"` (letzter Tag, mitteleuropäische Zeit; weglassen = ohne
+  Ende). Es zählt die Uhr von GitHub, nicht die des Testers.
+- **Einen Tester sperren:** seine Zeile unter `"testers"` löschen (oder `"until"` auf einen vergangenen Tag).
+- **Neuer Tester von Hand:** im Physics-Ordner `node scripts/demo-access.mjs key "Name" [JJJJ-MM-TT]`, die
+  ausgegebene Zeile unter `"testers"` einfügen. (Mit der Bat geht das in einem Schritt.)
 
 ## Wichtig
 
-- Die Datei muss gültiges JSON sein: Komma zwischen den Einträgen, keins nach dem letzten, gerade Anführungszeichen.
-  Bei einem Fehler startet keine Demo neu („Freigabe nicht lesbar“), laufende spielen noch 30 Minuten weiter.
-  Prüfen: `node scripts/demo-access.mjs check` (mit einem Schlüssel dahinter: was dieser Tester sieht).
+- In der Datei steht je Tester nur der SHA-256 seines Schlüssels, nicht der Schlüssel selbst; die öffentliche Datei
+  verrät also keinen. Die Namen sind öffentlich lesbar: lieber Vornamen oder Kürzel.
+- Die Datei muss gültiges JSON sein (Komma zwischen den Einträgen, keins nach dem letzten, gerade Anführungszeichen).
+  Die Bat schreibt sie immer gültig. Bei einem Fehler von Hand startet keine Demo neu („Freigabe nicht lesbar“),
+  laufende spielen noch 30 Minuten weiter. Prüfen: Menüpunkt 6 oder `node steuern.mjs stand`.
 - Ohne Internet startet die Demo nicht. Reißt die Verbindung im Spiel ab, läuft sie noch 30 Minuten.
-- Das Repo muss öffentlich bleiben (die Demo fragt ohne Anmeldung). Es enthält keinen Code und keine Schlüssel.
+- `"keys": false` hieße: jeder mit der exe kommt rein (nicht empfohlen).
+- Das Repo muss öffentlich bleiben (die Demo fragt ohne Anmeldung). Es enthält keine Schlüssel und keinen Code der
+  Demo, nur dieses kleine Steuer-Skript.
 - Ganz verhindern lässt sich das Umgehen nicht: Wer die exe auspackt und ändert, kommt vorbei. Gegen das einfache
   Weitergeben der exe hilft es aber, und jeder Schlüssel lässt sich einzeln sperren.
