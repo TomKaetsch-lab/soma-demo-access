@@ -1,0 +1,10 @@
+{
+  "open": true,
+  "message": "Der Playtest ist gerade pausiert. Danke fürs Testen!",
+  "keys": true,
+  "testers": [
+    {"name": "Tester 1", "key": "3ff6e3b555afc5b181b18a2ccc57daa79a75b5d9dadc31b1c8501cbcc8c63e40"},
+    {"name": "Tester 2", "key": "9513371383454a6ba7fd8a27e51faa20c9f48cef64bb19bb1c45778582016ae3"},
+    {"name": "Tester 3", "key": "56e4764ef91eaf2b841f4805ab81c44466e185bd5551d6978a5ba5bfda3c385f"}
+  ]
+}
