@@ -4,7 +4,6 @@
   "keys": true,
   "until": "2026-10-22",
   "testers": [
-    {"name":"Tester 3","key":"56e4764ef91eaf2b841f4805ab81c44466e185bd5551d6978a5ba5bfda3c385f"},
     {"name":"TomTest","key":"b8016b0fb0e05783804b0d9747d117804e5b4ecf1b980ff11faa247ff3150e26","until":"2026-10-20"}
   ]
 }
