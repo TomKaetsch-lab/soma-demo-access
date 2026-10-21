@@ -5,6 +5,27 @@ Diese Datei entscheidet, ob die SOMA-Body-Lab-Demo startet (Q64). Sie liegt im *
 `https://raw.githubusercontent.com/TomKaetsch-lab/soma-demo-access/main/access.json` beim Start und alle 5 Minuten ab.
 Eine Änderung wirkt nach spätestens etwa 10 Minuten (GitHub hält die Datei bis zu 5 Minuten zwischen).
 
+## Öffentliche Demo für itch.io (Q114, seit Version 0.9.3)
+
+Für itch.io braucht niemand einen Schlüssel: in `access.json` steht `"keys": false` (in der Bat Punkt **7
+Öffentlich**, zurück mit **8 Nur Tester**). Dann gilt:
+
+- **Jeder startet und spielt** die Demo sofort, ohne Sperrbildschirm. Die Freigabe wird im Hintergrund gelesen.
+- **Ohne Internet** (oder wenn GitHub nicht antwortet) spielt sie trotzdem.
+- **Abschalten:** Punkt **2 Demo schließen** (`"open": false`, mit Meldung). Laufende Demos sperren sich beim nächsten
+  Abruf (spätestens nach etwa 10 Minuten), neue starten mit dem Sperrbildschirm und deiner Meldung. Hat eine Demo
+  einmal „geschlossen“ gelesen, bleibt sie auch ohne Internet zu, bis sie wieder „offen“ liest. Ein Enddatum
+  (`"until"`) wirkt genauso.
+- **Wieder öffnen:** Punkt **1 Demo öffnen**; gesperrte Demos starten beim nächsten Abruf von selbst.
+- **Grenze:** Wer die Demo vom ersten Start an nie ins Internet lässt, bekommt das Abschalten nicht mit. Ein
+  Schlüssel-Zwang würde das verhindern, aber dann könnte nicht jeder spielen; für eine öffentliche Demo ist das der
+  übliche Kompromiss.
+
+Die exe ist dafür gebaut (`"somaAccessMode": "public"` in `electron-builder.demo.json`): auch vor der allerersten
+Antwort spielt sie. Der Testermodus mit Schlüsseln geht weiter wie unten beschrieben.
+
+Von Hand geht es auch: in `access.json` auf github.com `"keys": true` in `"keys": false` ändern.
+
 ## Am einfachsten: „Freigabe steuern.bat“
 
 Das Repo einmal klonen (VS Code: „Clone Repository“, oder `git clone https://github.com/TomKaetsch-lab/soma-demo-access`),
@@ -55,8 +76,9 @@ VS Code bearbeiten, committen und pushen.
 - Die Datei muss gültiges JSON sein (Komma zwischen den Einträgen, keins nach dem letzten, gerade Anführungszeichen).
   Die Bat schreibt sie immer gültig. Bei einem Fehler von Hand startet keine Demo neu („Freigabe nicht lesbar“),
   laufende spielen noch 30 Minuten weiter. Prüfen: Menüpunkt 6 oder `node steuern.mjs stand`.
-- Ohne Internet startet die Demo nicht. Reißt die Verbindung im Spiel ab, läuft sie noch 30 Minuten.
-- `"keys": false` hieße: jeder mit der exe kommt rein (nicht empfohlen).
+- Mit Schlüsseln startet die Demo ohne Internet nicht; reißt die Verbindung im Spiel ab, läuft sie noch 30 Minuten.
+  Öffentlich (`"keys": false`) spielt sie ohne Internet, außer sie hat zuletzt „geschlossen“ gelesen.
+- `"keys": false` heißt: öffentlich, jeder mit der exe kommt rein, auch ohne Internet (siehe oben, für itch.io).
 - Das Repo muss öffentlich bleiben (die Demo fragt ohne Anmeldung). Es enthält keine Schlüssel und keinen Code der
   Demo, nur dieses kleine Steuer-Skript.
 - Ganz verhindern lässt sich das Umgehen nicht: Wer die exe auspackt und ändert, kommt vorbei. Gegen das einfache

@@ -109,6 +109,18 @@ export const actions = {
     data.testers = testers.filter((tester) => !names.includes(tester.name))
     return { commit: `Tester ${names.join(', ')} entfernt`, removed: names }
   },
+  // Öffentlich (Q114, itch.io): jeder startet die Demo ohne Schlüssel, ohne Internet spielt sie
+  // weiter, „zu“ schaltet sie trotzdem für alle ab. Nur Tester: wieder mit Schlüssel.
+  oeffentlich(data) {
+    if (data.keys === false) return { error: 'Die Demo ist schon öffentlich.' }
+    data.keys = false
+    return { commit: 'Demo öffentlich (ohne Schlüssel)' }
+  },
+  tester(data) {
+    if (data.keys !== false) return { error: 'Die Demo braucht schon Schlüssel.' }
+    data.keys = true
+    return { commit: 'Demo nur mit Tester-Schlüssel' }
+  },
   ende(data, day) {
     if (day === '-' || day === '') {
       if (data.until == null) return { error: 'Es gibt kein Enddatum.' }
@@ -126,11 +138,11 @@ export function describe(data) {
   return [
     `  Playtest: ${data.open === true ? 'OFFEN' : 'GESCHLOSSEN'}${data.until ? ` (letzter Tag ${data.until})` : ''}`,
     `  Meldung, wenn geschlossen: ${data.message || '(keine)'}`,
-    `  Schlüssel nötig: ${data.keys === false ? 'nein (jeder mit der exe kommt rein)' : 'ja'}`,
+    `  Schlüssel nötig: ${data.keys === false ? 'nein (öffentlich: jeder spielt, auch ohne Internet; „zu“ schaltet ab)' : 'ja'}`,
     `  Tester (${testers.length}): ${testers.map((tester) => tester.name + (tester.until ? ` (bis ${tester.until})` : '')).join(', ') || 'keine'}`,
   ].join('\n')
 }
-const short = (data) => `${data.open === true ? 'OFFEN' : 'GESCHLOSSEN'}${data.until ? ` bis ${data.until}` : ''} · ${testersOf(data).length} Tester: ${listed(data)}`
+const short = (data) => `${data.open === true ? 'OFFEN' : 'GESCHLOSSEN'}${data.until ? ` bis ${data.until}` : ''} · ${data.keys === false ? 'ÖFFENTLICH (ohne Schlüssel)' : `${testersOf(data).length} Tester: ${listed(data)}`}`
 
 // Farbe nur im Konsolenfenster (Windows 10 und neuer können das).
 const tty = Boolean(process.stdout.isTTY)
@@ -250,7 +262,7 @@ async function menu() {
   await status()
   for (;;) {
     console.log(`\n${bold('Stand:')} ${short(readLocal())}`)
-    console.log('  1  Playtest öffnen\n  2  Playtest schließen\n  3  Tester hinzufügen\n  4  Tester entfernen\n  5  Enddatum für alle\n  6  Stand (auch was die Demos sehen)\n  0  Beenden')
+    console.log('  1  Demo öffnen\n  2  Demo schließen (für alle, mit Meldung)\n  3  Tester hinzufügen\n  4  Tester entfernen\n  5  Enddatum für alle\n  6  Stand (auch was die Demos sehen)\n  7  Öffentlich: jeder spielt ohne Schlüssel (itch.io)\n  8  Nur Tester: mit Schlüssel\n  0  Beenden')
     const choice = await input.question('\nWahl: ')
     if (choice === null || choice === '0') break
     if (choice === '') continue
@@ -260,7 +272,9 @@ async function menu() {
     else if (choice === '4') await removeTesters(ask)
     else if (choice === '5') change('ende', (await ask.question('Letzter Tag für alle (JJJJ-MM-TT, - = ohne Ende): ')).trim())
     else if (choice === '6') await status()
-    else console.log('Bitte 0 bis 6.')
+    else if (choice === '7') change('oeffentlich')
+    else if (choice === '8') change('tester')
+    else console.log('Bitte 0 bis 8.')
   }
   input.close()
 }
@@ -270,5 +284,5 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
   if (!command) await menu()
   else if (command === 'stand') await status()
   else if (actions[command]) process.exitCode = change(command, ...args) ? 0 : 1
-  else console.log('node steuern.mjs [stand | auf | zu "Meldung" | neu "Name" [JJJJ-MM-TT] | weg "Name" … | weg 1,3 | ende JJJJ-MM-TT|-]')
+  else console.log('node steuern.mjs [stand | auf | zu "Meldung" | oeffentlich | tester | neu "Name" [JJJJ-MM-TT] | weg "Name" … | weg 1,3 | ende JJJJ-MM-TT|-]')
 }
