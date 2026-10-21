@@ -2,7 +2,7 @@
   "open": true,
   "message": "The playtest is paused right now. Thanks for testing!",
   "keys": false,
-  "until": "2026-10-22",
+  "until": "2027-10-22",
   "testers": [
     {"name":"Aeth","key":"9318d041c396f158aba5915b54eb2bb64efefb128509d611495a0f8acc74a905","until":"2026-10-22"},
     {"name":"Alesinh01","key":"f6475611450fcfcf028c7c57e9a24a8772fad0330540ec70d2a1cd09ca75db12","until":"2026-10-22"}
