@@ -1,7 +1,7 @@
 {
   "open": true,
   "message": "The playtest is paused right now. Thanks for testing!",
-  "keys": true,
+  "keys": false,
   "until": "2026-10-22",
   "testers": [
     {"name":"TomTest","key":"b8016b0fb0e05783804b0d9747d117804e5b4ecf1b980ff11faa247ff3150e26","until":"2026-10-20"},
