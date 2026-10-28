@@ -15,5 +15,23 @@
       "until": "2026-10-22"
     }
   ],
-  "latest": "0.9.8"
+  "latest": "0.9.8",
+  "next": {
+    "version": "0.10.0",
+    "percent": 15,
+    "teaser": {
+      "de": [
+        "Gloria und Felix zusammen in einer Szene",
+        "Rettungseinsatz mit mehreren Verletzten",
+        "Das Haus als neue Karte",
+        "Felix kommt aus der Beta"
+      ],
+      "en": [
+        "Gloria and Felix together in one scene",
+        "Rescue with several injured people",
+        "The house as a new map",
+        "Felix leaves beta"
+      ]
+    }
+  }
 }
