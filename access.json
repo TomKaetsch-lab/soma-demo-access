@@ -15,7 +15,7 @@
       "until": "2026-10-22"
     }
   ],
-  "latest": "0.9.10",
+  "latest": "0.10.0",
   "next": {
     "version": "0.10.0",
     "percent": 95,
@@ -34,5 +34,46 @@
       ]
     }
   },
-  "minimum": "0.9.9"
+  "minimum": "0.9.10",
+  "notes": {
+    "version": "0.10.0",
+    "de": {
+      "title": "Weniger Abstürze, echte Wunden, Erste Hilfe",
+      "notes": [
+        "Neu in der Demo: das Haus als Beta (zwei Stockwerke, Garten, Garage; Tag und Nacht mit echten Lampen, Türen, Glas, der Hund, das Auto in der Garage zum Fahren), wählbar unter Welt → Spielbare Welten (Start bleibt im leeren Studio); dazu der",
+        "Gloria und Felix zusammen in einer Szene: jede weitere Person hat ihre eigene Figur und Kleidung (neben Gloria standardmäßig Felix); Rettungseinsatz mit bis zu drei Verletzten, jede mit eigenem Notfall, ein Klick wechselt den Patienten",
+        "Weniger Abstürze und Hänger: der Absturz genau zwei Minuten nach dem Start ist sehr wahrscheinlich behoben; kommt die Grafikkarte mit WebGPU nicht nach, wechselt SOMA gleich auf WebGL 2, statt minutenlang zu hängen; ältere Grafik (etwa Inte",
+        "Schwache Rechner werden erkannt (ältere AMD-Karten, keine Grafikkarte, Prozessoren mit weniger als 4 Threads, virtuelle Maschinen): SOMA startet im Modus Leistung und sagt es; bei Treiberproblemen ein Hinweis mit Link zum Treiber",
+        "Wunden je Waffe: 9 mm ein kleiner Einschuss und ein größerer Ausschuss, das Gewehr ein großer Ausschuss, Schrot von nah eine große Wunde, von weiter ein Streumuster; Messer glatte Ränder, ein Schlag Platzwunde und Bluterguss",
+        "Durchschüsse: eine Kugel, die wieder austritt, kann eine Person dahinter treffen; der Befund beschreibt Ein- und Ausschuss",
+        "Neues Werkzeug „Erste Hilfe“: Pflaster, Druckverband, Tourniquet, Desinfizieren und Schmerzmittel direkt auf die Wunde (Rechtsklick wechselt das Mittel); E fühlt den Puls",
+        "Rettung: Ansprechbarkeit prüfen (wach, Ansprache, Schmerz, keine Reaktion) und Sichtung nach START als neues Werkzeug, beides fließt in die Note ein",
+        "Werkzeugrad: in der Egoperspektive Tab gedrückt halten (am Controller LB), im Kreis das Werkzeug wählen und im äußeren Ring die Waffe",
+        "Hinweise unter dem Fadenkreuz („E · Puls fühlen“, „Klick · Anlegen: Druckverband“); die Werkzeugzeile ist klein und verschwindet schnell, „außer Reichweite“ steht klein unten rechts",
+        "Einstellungen neu geordnet: Bereiche mit Kacheln (Grafik, Ton, Steuerung, Barrierefreiheit, Gameplay …), Seltenes unter „Erweitert“",
+        "Barrierefreiheit: weniger Kamerawackeln und Blitze, Größe der Untertitel, Trefferfarben bei Farbschwäche, Blutmenge (voll, weniger, wenig)",
+        "Treffer fühlen sich deutlicher an: eigener Marker und Ton für Treffer auf die Weste, beim Spieler ein Ruck und ein Rand je nach Schwere; Battle Mode: sie gibt nicht so schnell auf, die Weste sitzt über der Kleidung",
+        "Blaues Blut färbt jetzt alles (Wunden, Pfützen, Spritzer, getränkte Kleidung) und ist auch in den Einstellungen; Blutspritzer erreichen mehr Wände"
+      ]
+    },
+    "en": {
+      "title": "Fewer crashes, real wounds, first aid",
+      "notes": [
+        "New in the demo: the house as a beta (two floors, garden, garage; day and night with real lamps, doors, glass, the dog, the car in the garage to drive), chosen under World → Playable worlds (the game still starts in the empty studio); and t",
+        "Gloria and Felix together in one scene: every further person has a figure and outfit of their own (Felix beside Gloria by default); a rescue with up to three injured people, each with their own emergency, a click switches the patient",
+        "Fewer crashes and hangs: the crash exactly two minutes after the start is most likely fixed; if the graphics card cannot keep up with WebGPU, SOMA switches to WebGL 2 right away instead of hanging for minutes; older graphics (for example In",
+        "Weak computers are recognised (older AMD cards, no graphics card, processors with fewer than 4 threads, virtual machines): SOMA starts in the performance mode and says so; with driver problems a hint with a link to the driver",
+        "Wounds by weapon: 9 mm a small entry and a larger exit, the rifle a large exit wound, a shotgun from close one large wound and from further a spread pattern; a knife smooth edges, a blow a laceration and a bruise",
+        "Through-shots: a bullet that exits can hit a person behind; the findings describe entry and exit",
+        "New tool “First aid”: plaster, pressure bandage, tourniquet, disinfecting and painkillers right on the wound (right click changes the means); E feels the pulse",
+        "Rescue: check how responsive she is (alert, voice, pain, unresponsive) and triage by START as a new item, both count towards the grade",
+        "Tool wheel: in first person hold Tab (LB on a controller), choose the tool in the circle and the weapon in the outer ring",
+        "Hints under the crosshair (“E · Feel the pulse”, “Click · Apply: pressure bandage”); the tool line is small and goes away quickly, “out of reach” is a small status at the bottom right",
+        "Settings rearranged: areas as tiles (graphics, sound, controls, accessibility, gameplay …), rarely needed things under “Advanced”",
+        "Accessibility: less camera shake and fewer flashes, subtitle size, hit colours for colour weakness, amount of blood (full, less, little)",
+        "Hits feel clearer: their own marker and sound for hits on the vest, for the player a jolt and an edge by severity; Battle Mode: she no longer gives up so quickly, the vest sits over the clothes",
+        "Blue blood now colours everything (wounds, pools, spatter, soaked clothes) and is in the settings too; blood spatter reaches more walls"
+      ]
+    }
+  }
 }
