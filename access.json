@@ -18,7 +18,7 @@
   "latest": "0.10.0",
   "next": {
     "version": "0.10.1",
-    "percent": 15,
+    "percent": 45,
     "teaser": {
       "de": [
         "Gloria V2 mit detaillierterer Anatomie, Muskelrelief und wählbarem Körperfett",
@@ -31,7 +31,8 @@
         "More realistic wounds: torn-out tissue, open fractures and swelling",
         "18+ demo: more anatomical detail and body responses",
         "More stable, plus a rescue glow that shows where to apply pressure"
-      ]
+      ],
+      "ru": []
     }
   },
   "minimum": "0.9.10",
