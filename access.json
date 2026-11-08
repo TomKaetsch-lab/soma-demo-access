@@ -17,27 +17,12 @@
   ],
   "latest": "0.10.1",
   "next": {
-    "version": "0.10.1",
-    "percent": 95,
+    "version": "0.10.2",
+    "percent": 0,
     "teaser": {
-      "de": [
-        "Gloria V2 mit detaillierterer Anatomie, Muskelrelief und wählbarem Körperfett",
-        "Realistischere Wunden: herausgerissenes Gewebe, offene Brüche, Schwellungen",
-        "18+-Demo: mehr anatomische Details und Körperreaktionen",
-        "Stabiler, dazu eine Leuchtmarkierung in der Rettung, wo du drücken musst"
-      ],
-      "en": [
-        "Gloria V2 with more detailed anatomy, muscle definition and adjustable body fat",
-        "More realistic wounds: torn-out tissue, open fractures and swelling",
-        "18+ demo: more anatomical detail and body responses",
-        "More stable, plus a rescue glow that shows where to apply pressure"
-      ],
-      "ru": [
-        "Gloria V2: детальнее анатомия, рельеф мышц и выбор процента жира",
-        "Реалистичные раны: вырванные ткани, открытые переломы, отёки",
-        "Демо 18+: больше анатомических деталей и реакций тела",
-        "Стабильнее, плюс подсветка при спасении: видно, куда давить"
-      ]
+      "de": [],
+      "en": [],
+      "ru": []
     }
   },
   "minimum": "0.10.0",
