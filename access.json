@@ -17,27 +17,12 @@
   ],
   "latest": "0.10.2",
   "next": {
-    "version": "0.10.2",
-    "percent": 95,
+    "version": "0.10.3",
+    "percent": 0,
     "teaser": {
-      "de": [
-        "Flüssiger auf schwächeren PCs: Dauerfeuer, Wunden und Dusche brauchen weniger Rechenleistung",
-        "Stabiler: Fixes aus dem großen Code-Scan (Rückgängig, Figurwechsel, Battle Mode, Videoaufnahme)",
-        "Feinschliff an Gloria V2 und den neuen Welten",
-        "Eure Fehlerberichte und Wünsche aus der 0.10.1"
-      ],
-      "en": [
-        "Smoother on weaker PCs: rapid fire, wounds and the shower need less processing power",
-        "More stable: fixes from the big code review (undo, character switch, Battle Mode, video recording)",
-        "More polish on Gloria V2 and the new worlds",
-        "Your bug reports and wishes from 0.10.1"
-      ],
-      "ru": [
-        "Плавнее на слабых ПК: стрельба очередями, раны и душ требуют меньше ресурсов",
-        "Стабильнее: исправления после большой проверки кода (отмена, смена персонажа, Battle Mode, запись видео)",
-        "Доработка Глории V2 и новых миров",
-        "Ваши отчёты об ошибках и пожелания из 0.10.1"
-      ]
+      "de": [],
+      "en": [],
+      "ru": []
     }
   },
   "minimum": "0.10.1",
