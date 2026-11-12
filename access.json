@@ -121,5 +121,10 @@
       "ru": "Купили за 0,99 €? Пришлите чек в личные сообщения в Discord или на почту (bodylabsoma@gmail.com) и получите 0.10.2 бесплатно."
     }
   },
-  "ultraUrl": "https://soma-bodylab.itch.io/soma/purchase?reward_id=27965"
+  "ultraUrl": "https://soma-bodylab.itch.io/soma/purchase?reward_id=27965",
+  "prices": {
+    "adult": 2.49,
+    "vip": 6.99,
+    "ultra": 19.99
+  }
 }
