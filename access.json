@@ -46,6 +46,7 @@
     "de": {
       "title": "Gloria V2, neue Wunden, Duschkabine und Untersuchungsraum",
       "notes": [
+        "Für 0,99 € gekauft? Melde dich mit dem Kaufbeleg per Discord-DM oder E-Mail (bodylabsoma@gmail.com) und du bekommst die 0.10.2 gratis.",
         "Gloria V2 ist die Hauptfigur: Körperfett aus Toms Scan in vier Stufen (Sportlich, Normal, Mollig, Füllig), neue Füße mit einzelnen Zehen und Nägeln, Muskelrelief beim Anspannen",
         "Lebende Haut: sie plättet sich, wo sie aufliegt, gleitet über Schlüsselbein und Knie, federt bei Bewegung nach; bei Anstrengung pochen die Adern am Hals",
         "Neue Wunden: Machete und Axt hinterlassen einen langen, keilförmig tiefen Hieb, das Messer einen schmalen Stich, Schläger und Hammer eine aufgeplatzte Platzwunde über dem Knochen, am Schienbein auch einen offenen Bruch",
@@ -60,8 +61,10 @@
         "Befund: Zeitleiste der Verletzungen, Klemmbrett mit Anordnungen und Sichtung, gut sichtbar „Arztbericht öffnen“; die Leuchtmarkierung blutender Wunden gibt es jetzt auch in der Operation (abschaltbar)",
         "Auswahl mit Vorschaubildern statt Listen (Outfits, Figur, Welt); Beispielszenen im Hauptmenü zum direkten Ausprobieren",
         "Stabiler auf schwacher Grafik: die Anatomie lädt nach und nach statt das Fenster einzufrieren, kein Hänger mehr nach einem Neubau unter WebGPU, Grafik im AMD-Prozessor startet im Modus Leistung",
-        "Schneller: Dauerfeuer, Figurwechsel und Neuaufbau; die neuen Welten und weitere Personen sind im Modus Leistung deutlich leichter",
+        "Stabiler: startet WebGPU nicht rechtzeitig, wechselt SOMA selbst auf WebGL 2; nach drei Abstürzen in einer Minute erscheint eine klare Seite mit „Erneut versuchen“ statt endlosem Neuladen; Fehlerberichte bleiben auf dem PC, bis sie wirklich gesendet sind",
+        "Schneller: Dauerfeuer, Figurwechsel und Neuaufbau; die neuen Welten und weitere Personen sind im Modus Leistung deutlich leichter; Dauerfeuer ruckelt weniger, und SOMA bleibt flüssig, wenn ein anderes Fenster vorne liegt oder es verdeckt",
         "Kleinere Fixes: kein Blut mehr am Start, sie kippt im Stehen nicht mehr nach vorn, Fleischfetzen, Körperteile und die Granate rollen nicht mehr aus dem Bild, keine Linie mehr am Horizont, Explosionen verletzen wieder",
+        "Weitere Fixes: die dunklen Flecken an ihrer rechten Seite und die Hautstelle neben dem rechten Auge sind weg, das Duschwasser trifft wirklich ihre Haut, „Rhythmus & Tempo“ ist übersetzt, und fehlende russische Texte erscheinen auf Englisch statt auf Deutsch",
         "Bedienung: Welten und Hintergründe in einem Menü mit Bildern, Vorschaubilder werden beim Verweilen groß, Hinweise als klare Karten, Unfälle mit Symbolen; das Spiel startet auf Englisch",
         "Barfuß steht sie flach auf dem Boden, Piercings folgen jeder Bewegung, unter der Dusche steht sie mittig und die Kleidung wird erst oben, dann unten nass und trocknet wieder",
         "Hauptmenü: die VIP-Supporter laufen oben rechts durch (danke!), darunter die neue Stufe ULTRA VIP – Founder Edition mit Vollversion zum Release",
@@ -71,6 +74,7 @@
     "en": {
       "title": "Gloria V2, new wounds, shower cabin and examination room",
       "notes": [
+        "Bought for €0.99? Send your receipt via Discord DM or email (bodylabsoma@gmail.com) and get 0.10.2 for free.",
         "Gloria V2 is the main character: body fat from Tom's scan in four levels (Toned, Average, Chubby, Plus-size), new feet with single toes and nails, muscle relief when she tenses",
         "Living skin: it flattens where she rests on it, slides over collarbone and knee, settles after a move; under strain the veins on her neck throb",
         "New wounds: machete and axe leave a long, wedge-deep chop, the knife a narrow stab, bat and hammer a burst laceration over the bone, on the shin an open fracture too",
@@ -85,8 +89,10 @@
         "Findings: a timeline of the injuries, a clipboard with orders and triage, a clear \"Open doctor's report\"; the glow of bleeding wounds now in surgery too (can be switched off)",
         "Choices with preview pictures instead of lists (outfits, figure, world); example scenes in the main menu to try straight away",
         "More stable on weak graphics: the anatomy loads bit by bit instead of freezing the window, no more hang after a rebuild under WebGPU, graphics inside an AMD processor start in Performance mode",
-        "Faster: sustained fire, changing the figure and rebuilding; the new worlds and further people are much lighter in Performance mode",
+        "More stable: if WebGPU doesn't start in time, SOMA switches to WebGL 2 by itself; after three crashes within a minute a clear page with \"Try again\" appears instead of endless reloading; crash reports stay on your PC until they are really sent",
+        "Faster: sustained fire, changing the figure and rebuilding; the new worlds and further people are much lighter in Performance mode; sustained fire stutters less, and SOMA stays smooth when another window is in front or covers it",
         "Smaller fixes: no more blood at the start, she no longer tips forward while standing, flesh chunks, body parts and the grenade no longer roll out of view, no line at the horizon, explosions wound again",
+        "More fixes: the dark spots on her right side and the skin patch next to her right eye are gone, the shower water really hits her skin, \"Rhythm & tempo\" is translated, and missing Russian texts show in English instead of German",
         "Controls: worlds and backdrops in one menu with pictures, preview pictures grow when you hover, hints as clear cards, accidents with symbols; the game starts in English",
         "Barefoot she stands flat on the floor, piercings follow every movement, in the shower she stands under the head and her clothes get wet from the top down and dry again",
         "Main menu: the VIP supporters run along the top right (thank you!), below them the new tier ULTRA VIP – Founder Edition with the full game at release",
@@ -96,6 +102,7 @@
     "ru": {
       "title": "Глория V2, новые раны, душевая и смотровой кабинет",
       "notes": [
+        "Купили за 0,99 €? Пришлите чек в личные сообщения в Discord или на почту (bodylabsoma@gmail.com) и получите 0.10.2 бесплатно.",
         "Глория V2 стала главной героиней: жир тела по скану Тома в четырёх степенях (спортивная, обычная, пухлая, полная), новые стопы с отдельными пальцами и ногтями, рельеф мышц при напряжении",
         "Живая кожа: она уплощается там, где лежит на опоре, скользит над ключицей и коленом, пружинит после движения; при нагрузке на шее пульсируют вены",
         "Новые раны: мачете и топор оставляют длинную глубокую рубленую рану, нож — узкую колотую, бита и молоток — рваную рану над костью, на голени ещё и открытый перелом",
@@ -110,13 +117,20 @@
         "Обследование: хронология травм, планшет с назначениями и сортировкой, заметная кнопка «Открыть заключение врача»; подсветка кровоточащих ран теперь и в операции (можно выключить)",
         "Выбор с картинками вместо списков (одежда, фигура, мир); примеры сцен в главном меню, чтобы сразу попробовать",
         "Стабильнее на слабой графике: анатомия загружается по частям, а не замораживает окно, больше нет зависания после перестройки под WebGPU, встроенная графика AMD запускается в режиме «Производительность»",
-        "Быстрее: непрерывный огонь, смена фигуры и перестройка; новые миры и другие люди в режиме «Производительность» намного легче",
+        "Стабильнее: если WebGPU не запускается вовремя, SOMA сама переключается на WebGL 2; после трёх сбоев за минуту вместо бесконечной перезагрузки появляется понятная страница с кнопкой «Попробовать снова»; отчёты об ошибках остаются на ПК, пока не будут отправлены",
+        "Быстрее: непрерывный огонь, смена фигуры и перестройка; новые миры и другие люди в режиме «Производительность» намного легче; непрерывный огонь меньше подтормаживает, и SOMA остаётся плавной, когда другое окно впереди или перекрывает её",
         "Мелкие исправления: больше нет крови при старте, она больше не наклоняется вперёд стоя, куски плоти, части тела и граната больше не укатываются из кадра, нет линии на горизонте, взрывы снова ранят",
+        "Ещё исправления: тёмные пятна на её правом боку и участок кожи рядом с правым глазом исчезли, вода из душа действительно попадает на кожу, «Ритм и темп» переведены, а недостающие русские тексты показываются на английском, а не на немецком",
         "Управление: миры и фоны в одном меню с картинками, превью увеличиваются при наведении, подсказки в виде понятных карточек, несчастные случаи со значками; игра запускается на английском",
         "Босиком она стоит на полу всей стопой, пирсинг следует за каждым движением, в душе она стоит под лейкой, одежда намокает сверху вниз и снова высыхает",
         "Главное меню: VIP-поддержка бежит строкой справа вверху (спасибо!), под ней новый уровень ULTRA VIP – Founder Edition с полной версией к релизу",
         "Демо 18+: новый контент в отдельном разделе «18+» с клавишей скрытия (F2); подробности в девлоге"
       ]
+    },
+    "notice": {
+      "de": "Für 0,99 € gekauft? Melde dich mit dem Kaufbeleg per Discord-DM oder E-Mail (bodylabsoma@gmail.com) und du bekommst die 0.10.2 gratis.",
+      "en": "Bought for €0.99? Send your receipt via Discord DM or email (bodylabsoma@gmail.com) and get 0.10.2 for free.",
+      "ru": "Купили за 0,99 €? Пришлите чек в личные сообщения в Discord или на почту (bodylabsoma@gmail.com) и получите 0.10.2 бесплатно."
     }
   },
   "ultraUrl": "https://soma-bodylab.itch.io/soma/purchase?reward_id=27965"
