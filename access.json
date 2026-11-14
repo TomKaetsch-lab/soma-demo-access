@@ -18,11 +18,26 @@
   "latest": "0.10.2",
   "next": {
     "version": "0.10.3",
-    "percent": 5,
+    "percent": 20,
     "teaser": {
-      "de": [],
-      "en": [],
-      "ru": []
+      "de": [
+        "Durchhalten-Modus mit Wellen und Rekord",
+        "Regie für Gloria",
+        "Bauchschnitt und Verbrennungen",
+        "Flüssigkeiten mit Dusche"
+      ],
+      "en": [
+        "Holdout mode with waves and records",
+        "Direct Gloria",
+        "Belly cut and burns",
+        "Liquids with shower"
+      ],
+      "ru": [
+        "режим «Продержаться» с волнами и рекордом",
+        "управление Глорией",
+        "разрез живота и ожоги",
+        "жидкости и душ"
+      ]
     }
   },
   "minimum": "0.10.1",
